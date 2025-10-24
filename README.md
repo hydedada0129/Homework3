@@ -56,4 +56,18 @@ tessert安裝路徑
 被辨識的圖片路徑    
 
 
+# OCR流程
+圖片預處理（簡化與清理）：opencv套件
+原始圖片 (img)
+   ↓ 灰階化
+灰階圖 (gray)
+   ↓ 模糊/二值化
+二值圖 (binary)
+   ↓ 邊緣偵測
+邊緣圖 (edges)
+   ↓ findContours(edges, ...)
+找到輪廓 (contours)
+
+轉灰階，高斯模糊，二值化（黑白化，讓輪廓更明顯），特徵提取（Canny邊緣偵測)，
+
 
